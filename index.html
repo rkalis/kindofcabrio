@@ -1,14 +1,17 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="functions.js"></script>
   </head>
   <body>
 
-    <div class="kind">
-      <img onclick="showResult('fout')" src="kind.jpg" />
+    <div class="kind" id="kind">
+      <!-- <img onclick="showResult('fout')" src="kind.jpg" /> -->
+      <script>getRandomImage(8, "kinderen/", 'fout')</script>
     </div>
-    <div class="cabrio">
-      <img onclick="showResult('goed')" src="cabrio.jpg" />
+    <div class="cabrio" id="cabrio">
+      <!-- <img onclick="showResult('goed')" src="cabrio.jpg" /> -->
+      <script>getRandomImage(8, "cabrios/", 'goed')</script>
     </div>
 
     <div id="fout" class="overlay" onclick="hideResult()">
@@ -18,22 +21,9 @@
     </div>
     <div id="goed" class="overlay" onclick="hideResult()">
       <div class="overlay-content">
-        <h1> GOEDE KEUZE! LEKKER PIK! </h1>
+        <h1> LEKKER PIK! GOEDE KEUZE!</h1>
       </div>
     </div>
-
-    <script>
-      function showResult(choice) {
-          document.getElementById(choice).style.height = "100%";
-      }
-
-      function hideResult() {
-          var x = document.getElementsByClassName("overlay");
-          for (var i = 0; i < x.length; i++) {
-              x[i].style.height = "0%";
-          }
-      }
-    </script>
 
   </body>
 </html>
