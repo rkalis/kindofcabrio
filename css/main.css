@@ -19,31 +19,38 @@ body {
 .kind img, .cabrio img {
     width: 100%;
 }
-
 .kind img:hover, .cabrio img:hover {
     opacity:0.8;
     cursor: hand;
 }
 
-/* The Overlay (background) */
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
+.overlay { 
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+}
+#fout {
+    background-color: rgb(200,20,20);
+    background-color: rgba(200,20,20, 0.7);
+}
+#goed {
+    background-color: rgb(50,200,80);
+    background-color: rgba(50,200,80, 0.7);
 }
 
-/* Position the content inside the overlay */
 .overlay-content {
+    font-family: helvetica, sans-serif;
+    font-size: 25px;
     position: relative;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 }

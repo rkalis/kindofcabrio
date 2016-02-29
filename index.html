@@ -1,40 +1,37 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
   </head>
   <body>
 
-
     <div class="kind">
-      <img onclick="openNav('fout')" src="kind.jpg" />
+      <img onclick="showResult('fout')" src="kind.jpg" />
     </div>
     <div class="cabrio">
-      <img onclick="openNav('goed')" src="cabrio.jpg" />
+      <img onclick="showResult('goed')" src="cabrio.jpg" />
     </div>
 
-    <div id="fout" class="overlay" onclick="closeNav('fout')">
-      
+    <div id="fout" class="overlay" onclick="hideResult()">
       <div class="overlay-content">
         <h1> FOUT! VEEL PLEZIER MET LUIERS VERSCHONEN LUL! </h1>
       </div>
-
     </div>
-    <div id="goed" class="overlay" onclick="closeNav('goed')">
-
+    <div id="goed" class="overlay" onclick="hideResult()">
       <div class="overlay-content">
-        <h1> GOED! LEKKER GEWERKT PIK! </h1>
+        <h1> GOEDE KEUZE! LEKKER PIK! </h1>
       </div>
-
     </div>
 
     <script>
-      function openNav(choice) {
-          document.getElementById("FOUT").style.height = "100%";
+      function showResult(choice) {
+          document.getElementById(choice).style.height = "100%";
       }
 
-      function closeNav(choice) {
-          document.getElementById(choice).style.height = "0%";
+      function hideResult() {
+          var x = document.getElementsByClassName("overlay");
+          for (var i = 0; i < x.length; i++) {
+              x[i].style.height = "0%";
+          }
       }
     </script>
 
