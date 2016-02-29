@@ -1,0 +1,25 @@
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.kind {
+    background-color: red; 
+    float: left;
+    width: 50%;
+    z-index: 0;
+}
+.cabrio {
+    background-color: green;
+    float: right;
+    width: 50%;
+    z-index: 0;
+}
+
+.kind img, .cabrio img {
+    width: 100%;
+}
+
+.kind img:hover, .cabrio img:hover {
+    opacity:0.8;
+}
